@@ -1,0 +1,19 @@
+﻿@model Announcement
+@{
+    ViewData["Title"] = "AnnouncementDetail";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+<link href="~/css/Announcement.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <h2 class="text-center text-primary">Duyuru Detay</h2>
+        <div class="vtimeline-content">
+            <h3>@Model.Title</h3>
+            <p>
+             
+                @Model.Content
+            </p><br>
+            
+        </div>
+    
+    </div>

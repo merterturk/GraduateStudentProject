@@ -1,0 +1,36 @@
+﻿@using GraduateStudent.Dal.Constant;
+@model Student
+@{
+    ViewData["Title"] = "GraduateSearch";
+    string data = TempData["Message"] as string;
+}
+
+<h2 class="text-primary text-center mt-5">Mezun Öğrenci Sorgulama</h2>
+<form asp-action="GraduateSearch" asp-controller="Home" method="post" class="mt-5">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-1">
+                <label class="ml-3 font-weight-bold">Öğrenci No:</label>
+
+            </div>
+            <div class="col-md-11">
+                <input type="text" class="form-control" maxlength="15" asp-for="SchoolNumber" required />
+
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary w-50 text-center mt-5">Ara</button>
+    </div>
+</form>
+
+@if (data == Messages.Graduated)
+{
+    <h3 class="alert-success mt-5 text-center">@TempData["Message"]</h3>
+
+}
+else
+{
+    <h3 class="alert-danger mt-5 text-center">@TempData["Message"]</h3>
+}

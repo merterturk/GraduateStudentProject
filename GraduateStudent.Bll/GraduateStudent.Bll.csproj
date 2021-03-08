@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraduateStudent.Dal\GraduateStudent.Dal.csproj" />
+    <ProjectReference Include="..\GraduateStudent.Entities\GraduateStudent.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

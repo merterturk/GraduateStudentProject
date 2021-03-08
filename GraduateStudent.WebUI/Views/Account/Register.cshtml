@@ -1,0 +1,48 @@
+﻿@using GraduateStudent.Dal.Constant;
+@model Student
+@{
+    string data = TempData["RegisterControl"] as string;
+}
+<head>
+    <link href="~/css/RegisterLogin.css" rel="stylesheet" />
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Register" asp-controller="Account" class="box">
+                @Html.AntiForgeryToken()
+                <h1 style="text-transform:none">Mezun Öğrenci Kayıt</h1>
+                <input type="text" asp-for="SchoolNumber" required placeholder="Öğrenci Numarası" id="studentnumber" />
+                <input type="password" placeholder="Şifre" id="password" asp-for="Password">
+                <p class="text-white"><input type="checkbox" id="toggle" /> <span id='toggleText'>Göster</span></p>
+                <a asp-action="Login" asp-controller="Account" class="forgot text-muted">Giriş Yap</a>
+                <input type="submit" value="Kayıt Ol" id="btn">
+                @if (data == Messages.SuccessRecord)
+                {
+                    <h3 class="alert-success mt-5 text-center">@TempData["RegisterControl"]</h3>
+                }
+                else
+                {
+                    <h3 class="alert-danger mt-5 text-center">@TempData["RegisterControl"]</h3>
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/jquery/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#toggle").change(function () {
+            if ($(this).is(':checked')) {
+                $("#password").attr("type", "text");
+                $("#toggleText").text("Gizle");
+            } else {
+                $("#password").attr("type", "password");
+                $("#toggleText").text("Göster");
+            }
+
+        });
+    });
+
+</script>

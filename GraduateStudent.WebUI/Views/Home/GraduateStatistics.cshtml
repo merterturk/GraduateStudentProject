@@ -1,0 +1,71 @@
+﻿
+@{
+
+}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center font-weight-bold">Toplam Lisans Mezunu</div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <h2 class="text-center">@TempData["Undergraduate"]</h2>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3 " style="max-width: 18rem;">
+                <div class="card-header text-center font-weight-bold">Toplam ÖnLisans Mezunu</div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <h2 class="text-center">@TempData["Associate"]</h2>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header text-center font-weight-bold">Toplam Öğrenci Sayısı</div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <h2 class="text-center">@TempData["TotalStudent"]</h2>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3" style="max-width: 18rem; height:180px;">
+            <div class="card-header text-center font-weight-bold">2021 Yılı Mezun Sayısı</div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h2 class="text-center">@TempData["Graduatedfor2021"]</h2>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white mb-3" style="max-width: 18rem; background-color:tomato">
+            <div class="card-header text-center font-weight-bold">Mezun Sistemine Kayıtlı Öğrenci Sayısı</div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h2 class="text-center">@TempData["RegisteredSystem"]</h2>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white mb-3" style="max-width: 18rem; height:185px; background-color:midnightblue">
+            <div class="card-header text-center font-weight-bold">Toplam Bölüm Sayısı</div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h2 class="text-center">@TempData["TotalDepartment"]</h2>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

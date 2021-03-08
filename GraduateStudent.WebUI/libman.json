@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.6.0",
+      "destination": "wwwroot/css/twitter-bootstrap/"
+    },
+    {
+      "library": "slim.js@4.0.7",
+      "destination": "wwwroot/css/twitter-bootstrap/slim.js/",
+      "files": [
+        "Slim.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/css/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.slim.js"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Announcement>
+@{
+    ViewData["Title"] = "Announcement";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+<link href="~/css/Announcement.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <h2 class="text-center text-primary">Duyurular</h2>
+    @foreach (var announcement in Model)
+    {
+        <div class="vtimeline-content">
+           <h3>@announcement.Title</h3>
+            <p>
+               @announcement.Content.Substring(0, 150)
+                ...
+            </p><br>
+            <a asp-action="AnnouncementDetail" asp-controller="Student" asp-route-id="@announcement.Id" class="btn btn-outline-secondary btn-sm">Devamı...</a>
+        </div>
+    }
+
+
+</div>
+ 

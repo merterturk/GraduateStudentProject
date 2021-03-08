@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mezun Bilgi Sistemi</title>
+    <link href="~/css/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:50px;">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <a class="navbar-brand text-white ml-5">
+                        Mezun Öğrenci Bilgi Sistemi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link text-white font-weight-bold" asp-action="Index" asp-controller="Student">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link text-white font-weight-bold" asp-action="Announcement" asp-controller="Student">Duyurular</a>
+                </li>
+               
+
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <a class="btn btn-danger my-2 my-sm-0" asp-action="Logout" asp-controller="Student">Cıkış Yap</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
+<script src="~/js/jquery/jquery.min.js"></script>
+<script src="~/css/twitter-bootstrap/js/bootstrap.min.js"></script>

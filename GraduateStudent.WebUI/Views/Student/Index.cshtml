@@ -1,0 +1,111 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    string fullname = Context.Session.GetString("fullname");
+    string department = Context.Session.GetString("department");
+    string schoolNumber = Context.Session.GetString("schoolNumber");
+    string TcNo = Context.Session.GetString("TcNo");
+    string telephoneNumber = Context.Session.GetString("telephoneNumber");
+    string birthdayDate = Context.Session.GetString("birthdayDate");
+    string email = Context.Session.GetString("email");
+    string graduateYear = Context.Session.GetString("graduateYear");
+    string registrationDate = Context.Session.GetString("registrationDate");
+}
+<link href="~/css/StudentInformation.css" rel="stylesheet" />
+<div class="container">
+    <div class="main-body">
+        <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>@fullname</h4>
+                                <p class="text-primary mb-1 font-weight-bold">@department</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Ad Soyad</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              @fullname
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Öğrenci Numarası</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @schoolNumber
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">TC No</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @TcNo
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Telefon Numarası</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @telephoneNumber
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Doğum Tarihi</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                               @birthdayDate
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">E-Mail</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                               @email
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mezun Tarihi</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                @graduateYear
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Sisteme Kayıt Tarihi</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              @registrationDate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

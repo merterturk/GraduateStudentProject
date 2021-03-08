@@ -1,0 +1,29 @@
+﻿@model Student
+@{
+
+}
+<head>
+    <link href="~/css/RegisterLogin.css" rel="stylesheet" />
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="box" asp-action="Login" asp-controller="Account">
+                @Html.AntiForgeryToken()
+                <h1 style="text-transform:none">Mezun Öğrenci Giriş</h1>
+                <input type="text" placeholder="Öğrenci Numarası" required asp-for="SchoolNumber">
+                <input type="password" placeholder="Şifre" required asp-for="Password">
+                <a asp-action="Register" asp-controller="Account" class="forgot text-muted">Kayıt Ol!</a>
+                <br />
+                <a asp-action="PasswordForgot" asp-controller="Account" class="forgot text-muted">Şifremi Unuttum</a>
+
+
+                <input type="submit" name="" value="Giriş Yap">
+                <h2 class="alert-danger mt-5 text-center">@TempData["Failed"]</h2>
+            </form>
+</div>
+    
+    </div>
+       
+</div>
+
