@@ -4,5 +4,6 @@
 ### Generic Repository Design Pattern
 
 ## Staj Raporu
-[StajProjesi.pdf](https://github.com/merterturk/GraduateStudentProject/files/6212934/StajProjesi.pdf)
+[StajRapor.pdf](https://github.com/merterturk/GraduateStudentProject/files/6212942/StajRapor.pdf)
+
 
